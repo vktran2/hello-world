@@ -1,0 +1,44 @@
+Assignment1 - By Victor Tran
+Description
+A python script that will convert a given date of birth string that can be received in various formats, into a standard format.
+The main script will begin by setting a1_vktran2.py as the main module.
+Step 1
+There will be an if statement to check if the number of arguments is equal to 2. If not the usage function will be executed displaying "Usage: a1_vktran2.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD" and the module will be exited.
+Step 2
+If there are two arguments the script will continue. An array will be created called 'month_name' storing all months Jan-Dec. A hashtable will also be created called 'days_in_month', storing the month number and number of days in that month (ex. December will be stored as {12:31}. The first argument of the module will also be stored in variable 'user_raw_data'.
+Step 3
+Allowed variables are declared in the allow_chars variable. Then the sanitize function will run with arguments (user_raw_data, allow_chars), storing the output into variable 'dob'. The result will be printed in the format 'Sanitized user data: , dob'.
+Step 4
+Size_check function will be run with arguments (dob,8) and stored into the variable 'result'. An if statement will print "Error 09: wrong data entered" if the dob character length is not equal to 8, then exiting the module.
+Step 5
+If variable result was true then the script will continue and year, month, day variables will be made with integer values of dob[0:4], dob[4:6], and dob[6:] assigned to the previous listed variables in the same order.
+Step 6
+The function range_check will be used to check for four key details. If the year is within the range of 1900 to 9999, if not the module will print "Error 10: year out of range, must be 1900 or later" and then exit. If the month is between 1-12, if not the module will print "Error 02: Wrong month entered" and then exit. If the leap year function is returned true then an extra day will be added into february. If the day is not within the range specified  in the days of the month then the module will print "Error 03: wrong day entered" and then exit. ALL VALUES RETURNED IN THIS STEP WILL BE STORED IN THE VARIABLE 'result'.
+Step 7
+The new standard format of "mmm d, yyyy" is created for the dob, saved in variable 'new_dob'.
+Step 8
+The module will print ("Your date of birth is:", new_dob).
+
+Function Description
+leap_year(obj)
+1. Take the data value of the year
+2. Check if the year is a leap year
+3. Return a value of True if it is a leap year, otherwise return false.
+
+sanitize(obj1,obj2)
+1. Take the values of the users first argument and the characters that are allowed.
+2. Remove all characters that are not allowed in the first argument from its string.
+3. Return the obj1 value with only allowed characters from obj2.
+
+size_check(obj, intobj)
+1. Use the result of the sanitize function and the number 8 for arguments obj and intobj.
+2. Compare the length length of the result to a required length of 8.
+3. Return a value of True if the length of obj is equal to 8, otherwise return false.
+
+range_check(obj1,obj2)
+1. Use the year, month, or day for the first argument and input a tuple for the second argument.
+2. Check if the first argument is within the range of the second argument.
+3. Return a value of True if obj1 is within the tuple range, otherwise return false.
+
+usage()
+1. Return a string describing the usage of the script.
