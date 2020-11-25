@@ -1,5 +1,5 @@
 Assignment2 - By Victor Tran
-Python Script Name: ur_vktran2.py
+Python Script Name: a2r_vktran2.py
 Description
 This python script shall accept and execute various filesnames as command line or optional parameters. In depth information will be given when using the --help option with the script.
 
@@ -8,6 +8,16 @@ OS -- used to allow use of the OS commands
 SYS  -- will be used to accept command line arguments
 argparse  -- will be used to assist the user on how to use the script, generating help messages and issue errors
 time -- will be used in comparing dates
+
+The main script will begin by setting a2r_vktran2.py.
+Step 1
+Argument parser shall be given consisting of:
+Positional args: F
+optional args: -h --help, -l {user,host} --list{user,host}, -r RHOST --rhost RHOST, -t {daily,weekly,monthly} --type {daily,weekly,monthly}, -u USER --user USER, -v --verbose
+Step 2
+Proper arguments read will determine the function needed to be executed through the use of if statements.
+Step 3
+The function executed will have its result printed.
 
 Functions
 user_list(file)
