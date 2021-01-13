@@ -1,3 +1,2 @@
-# hello-world
-ops435NAA
-Victor Tran
+# Python
+Assignment 1 folder
